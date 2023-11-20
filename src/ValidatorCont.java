@@ -12,21 +12,21 @@ public class ValidatorCont implements Validator {
 
 
     @Override
-    public void checkLogin(String login) throws WrongLoginException {
+    public void checkLogin() throws WrongLoginException {
         if (login.length() > 20 || !login.matches("^[a-zA-Z0-9_]+$")) {
             throw new WrongLoginException("Некорректный логин");
         }
     }
 
     @Override
-    public void checkPassword(String password) throws WrongPasswordException {
+    public void checkPassword() throws WrongPasswordException {
         if (password.length() > 20 || !password.matches("[a-zA-Z0-9_]+")) {
             throw new WrongPasswordException("Некорректный пароль");
         }
     }
 
     @Override
-    public void checkPasswordConfirm(String password, String passwordConfirm) throws WrongPasswordException {
+    public void checkPasswordConfirm() throws WrongPasswordException {
         if (!password.equals(confirmPassword)) {
             throw new WrongPasswordException("Пароли не совпадают");
         }

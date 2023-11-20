@@ -12,9 +12,9 @@ public class Main {
 
         ValidatorCont validator = new ValidatorCont(login, password, confirmPassword);
         try {
-            validator.checkLogin(login);
-            validator.checkPassword(password);
-            validator.checkPasswordConfirm(password, confirmPassword);
+            validator.checkLogin();
+            validator.checkPassword();
+            validator.checkPasswordConfirm();
             System.out.println("Пользователь прошел валидацию");
         } catch (WrongLoginException | WrongPasswordException e) {
             System.out.println("Ошибка валидации: " + e.getMessage());

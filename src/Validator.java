@@ -1,10 +1,11 @@
 public interface Validator {
 
-    void checkLogin(String login) throws WrongLoginException;
+    void checkLogin() throws WrongLoginException;
 
-    void checkPassword(String password) throws WrongPasswordException;
+    void checkPassword() throws WrongPasswordException;
 
-    void checkPasswordConfirm(String password, String passwordConfirm) throws WrongPasswordException;
+    void checkPasswordConfirm() throws WrongPasswordException;
+
 
 }
 
